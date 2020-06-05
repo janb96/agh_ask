@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	for temperature in temperatures
+		hr
+		br
+		p #{temperature.dateOfTemperature}
+		p #{temperature.temperature.weather[0].main}
+		p #{temperature.temperature.weather[0].description}
+		p #{temperature.temperature.main.temp} K
+		br
+		hr
